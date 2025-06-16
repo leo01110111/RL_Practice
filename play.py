@@ -3,7 +3,7 @@ from ppo_torch import Agent
 
 
 
-env = gym.make("CartPole-v0", render_mode="human")
+env = gym.make("Hopper-v5", render_mode="human")
 agent = Agent(n_actions=env.action_space.n, input_dims=env.observation_space.shape)
 agent.load_models()
 observation, info = env.reset()

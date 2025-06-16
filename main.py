@@ -4,7 +4,7 @@ from ppo_torch import Agent
 from utils import plot_learning_curve
 
 if __name__ == '__main__':
-    env = gym.make('CartPole-v0')
+    env = gym.make('Hopper-v5')
     N = 20 #steps taken before learning 
     batch_size = 5 
     n_epochs = 4 #how many times we do grad descent on one set of data 
@@ -14,7 +14,7 @@ if __name__ == '__main__':
                     input_dims=env.observation_space.shape)
     n_games = 300 #total games we'll play on
 
-    figure_file = 'plots/cartpole.png'
+    figure_file = 'plots/Hopper.png'
 
     best_score = -1 #env.reward_range[0]
     score_history = []
